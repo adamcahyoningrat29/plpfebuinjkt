@@ -648,7 +648,10 @@ mark,
 
 .item {
     height: 450px;
-    background: rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+    background: rgba(57, 212, 237, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(57, 212, 237, 0.4);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -683,9 +686,10 @@ mark,
     height: 3px;
 }
 
-.carousel .item .container-event .tanggal {
+.carousel .item .container-event .tanggal{
     text-align: left;
-    padding-top: 5px;i
+    padding-top: 5px;
+    padding-bottom: 5px;
     height: 85px;
     width: 200px;
     border-left: 4px dashed var(--blue);
@@ -698,6 +702,7 @@ mark,
   border-top: 4px solid var(--blue);
   border-radius: 5px;
   transform: scale(1.1);
+  padding-bottom: 10px;
   box-shadow: 5px 10px 8px rgba(0, 0, 0, .3);
 }
 .carousel .item .container-event .tanggal h3 {
@@ -737,6 +742,75 @@ mark,
 
 
 /*End Event Carousel*/
+
+/*Start Event Detail*/
+    .tambahan-margin{
+        margin-bottom: 200px;
+    }
+    .overlap{
+        margin-top: -200px;
+    }
+    .container-detail-event{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .event-detail-con{
+        width: 350px;
+        background:rgba(171, 215, 235, 0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        transition: .5s ease;
+        border: 1px solid rgba(171, 215, 235, 0.3);
+    }
+
+    .event-detail-con:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, .3);
+    }
+
+    .event-detail-con .gambar-poster-detail{
+        width: 93%;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .event-detail-con .gambar-poster-detail img{
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 100%;
+    
+    }
+
+    .event-detail-con .tanggal-detail-event h1{
+        margin-bottom: -20px !important;
+    }
+    .event-detail-con .tanggal-detail-event{
+        text-align: left;
+        height: 85px;
+        width: 200px;
+        border-left: 4px dashed var(--blue);
+        /*  border-right: 3px solid var(--blue);*/
+        transition: .5s ease;
+    }
+
+    .event-detail-con .tanggal-detail-event:hover{
+        border-left: 1px solid var(--blue);
+        border-top: 1px solid var(--blue);
+        border-radius: 5px;
+        transform: scale(1.1);
+        box-shadow: 5px 10px 8px rgba(0, 0, 0, .3);
+
+    }
+
+
+
+    
+   
+/*End Event Detail*/
+
 
 /* Start Card Team*/
 .our_team {
@@ -2455,6 +2529,35 @@ pre code {
     font-size: .5rem;
     margin-top: 0;
   }
+  .carousel .item .detail-event h2{
+      font-size: 1rem;
+    }
+  .carousel .item .detail-event p{
+      font-size: 0.3rem;
+    }
+
+  .carousel .item .detail-event button{
+      font-size: 1rem;
+      margin-top: 0;
+      width: 70%;
+    }
+
+  .carousel .event-carousel .item {
+      height: 100%;
+      width: 90%;
+      padding-bottom: 10px;
+      }
+  .carousel .event-carousel .item .tanggal h3{
+      margin-top: -10px;
+
+      }
+  .overlap{
+    margin-top: 0px;
+  }
+
+  .tambahan-margin{
+    margin-bottom: 0px;
+  }
 
 }
 @media (max-width: 767.98px) {
@@ -2481,6 +2584,11 @@ pre code {
     .carousel .item .container-event .tanggal h3{
       font-size: 2rem;
     }
+    .carousel .item .detail-event p{
+      font-size: 1rem;
+    }
+    
+
 }
 
 @media (max-width: 991.98px) {
@@ -2494,9 +2602,21 @@ pre code {
     .table-responsive-lg>.table-bordered {
         border: 0;
     }
+    .overlap{
+    margin-top: 0px;
+    }
+
+    .tambahan-margin{
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 1199.98px) {
+
+    .event-detail-con{
+        width: 280px;
+        
+    }
     .table-responsive-xl {
         display: block;
         width: 100%;
